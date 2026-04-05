@@ -74,8 +74,7 @@ const Chat = () => {
     display: "flex",
     flexDirection: "column",
     height: "100vh",
-    maxWidth: "600px",
-    margin: "0 auto",
+    width: "100%",
     backgroundColor: "#e5ddd5", // WhatsApp-like light background
     boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
   };
@@ -104,12 +103,12 @@ const Chat = () => {
     <div style={containerStyle}>
       <header style={headerStyle}>
         <div>
-          <h2 style={{ margin: 0, fontSize: "1.2rem" }}>FlapFly Chat</h2>
+          <h2 style={{ margin: 0, fontSize: "1.2rem" }}>Chat Notes</h2>
           <div style={{ fontSize: "0.8rem", opacity: 0.7 }}>Welcome, {username}!</div>
         </div>
         <span style={{ fontSize: "0.8rem", opacity: 0.6 }}>ID: {userId}</span>
       </header>
-      
+
       <div style={messagesAreaStyle}>
         {messages.map((msg) => (
           <Message key={msg.id} msg={msg} currentUser={userId} />
